@@ -8,6 +8,7 @@ function addMovie(event) {
   const movie = document.createElement('li')
 
   const movieTitle = document.createElement("span");
+  movieTitle.setAttribute("class", "movieTitle")
   movieTitle.textContent = inputField.value;
   movieTitle.addEventListener("click", crossOffMovie);
   movie.appendChild(movieTitle)
@@ -18,6 +19,7 @@ function addMovie(event) {
   //this will remove all the whitespace from user's input to use as an id, which could then be used as a selector
   const movieId = inputField.value.replace(/\s+/g, '');
   deleteBtn.setAttribute('id', movieId);
+  deleteBtn.setAttribute('class', "deleteButtons");
   movie.appendChild(deleteBtn);
 
   const list = document.querySelector("ul");
